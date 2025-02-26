@@ -1,0 +1,120 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scam Detector</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        input {
+            padding: 10px;
+            width: 60%;
+            margin: 10px 0;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>🔍 Scam Detector</h1>
+    <form method="POST">
+        <input type="text" name="message" placeholder="Enter your message..." required>
+        <button type="submit">Check</button>
+    </form>
+    {% if result %}
+        <p class="result">{{ result }}</p>
+    {% endif %}
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Fun Website</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anaheim:wght@400..800&family=Maitree:wght@200;300;400;500;600;700&family=Martel:wght@200;300;400;600;700;800;900&family=Tillana:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    </head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="head-text">GanGong</div>
+        <div class="subhead-text">Empowering Your Security with Smart AI Against Scams</div>
+    </header>
+
+    <div class="line">
+
+    </div>
+
+    <!-- Main Content Section -->
+    <div class="main-content">
+        <br>
+        <h1>🔍 Scam Detector</h1>
+        <form method="POST">
+            <input type="text" name="message" placeholder="Enter your message..." required>
+            <button type="submit">Check</button>
+        </form>
+        <ul>
+            {% for item in history %}
+                <li><strong>Message:</strong> {{ item.message }} <br> <strong>Prediction:</strong> {{ item.result }}</li>
+            {% endfor %}
+        </ul>
+    </br>
+
+    <!-- Footer Section -->
+    <div class="footer">
+
+        <div class="text-foot">
+            <div>Stay one step ahead of scammers </div>
+        </div>
+
+        <div class="contain-contact">
+            <div class="contact clickable" onclick="openGmail()">
+                <div class="contact-img">
+                    <img src="{{ url_for('static', filename='img/img-1.png') }}" alt="">
+                </div>
+                <div class="contact-text">
+                    Gmail
+                </div>
+            </div>
+            <div class="contact" onclick="window.open('https://github.com/Johnoo007', '_blank')">
+                <div class="contact-img">
+                    <img src="{{ url_for('static', filename='img/img-2.png') }}" alt="">
+                </div>
+                <div class="contact-text">
+                    Github
+                </div>
+            </div>
+        </div>    
+
+        <div>&copy; 2025 GanGong</div>
+
+    </div>
+
+    <form method="POST" action="/clear">
+        <button type="submit">Clear History</button>
+    </form>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>

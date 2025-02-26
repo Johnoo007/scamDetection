@@ -1,0 +1,184 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic page layout */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: white;
+}
+
+input {
+    padding: 10px;
+    width: 60%;
+    margin: 10px 0;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.result {
+    margin-top: 20px;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+header {
+    /* background-color: #4CAF50; */
+    color: white;
+    text-align: center;
+    padding: 2% 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+}
+
+.head-text {
+    font-family: Tillana;
+    font-size: 60px;
+    max-height: 80px;
+    color: black;
+}
+
+.subhead-text {
+    font-family: Maitree;
+    font-weight: 300; /* ทำให้ฟอนต์บาง */
+    color: black;
+}
+
+.line{
+    height: 0.1px;
+    width: 90%;
+    background-color: black;
+    justify-self: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+.main-content {
+    min-height: 40vh;
+    width: auto;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    background-color: white;
+    margin: 30px;
+    gap: 15px;
+    overflow: visible;
+    
+}
+
+.main-content .item {
+    border: 2px solid black;
+    border-radius: 20px;   
+    display: flex;
+    aspect-ratio : 16/6;
+    overflow: hidden;
+  
+    transition-duration: 500ms;
+}
+
+.main-content .item:hover {
+    cursor: pointer;
+    transform: scale(1.035);
+}
+
+.main-content .item img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: inherit; 
+}
+
+
+  
+
+/* @media only screen and (max-width: 1150px) {
+.main-content {
+    grid-template-columns: repeat(3, minmax(150px, 1fr)); 
+}
+} */
+
+@media only screen and (max-width: 1100px) {
+.main-content {
+    grid-template-columns: repeat(2, minmax(10px, 1fr)); /* ลดขนาดไอเท็มอีก */
+}
+}
+
+@media only screen and (max-width: 600px) {
+.main-content {               
+    grid-template-columns: repeat(1, minmax(10px, 1fr)); /* เล็กสุด */
+}
+}
+
+.footer {
+    color: black;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-family: Anaheim;
+    padding: 10px 0;
+    bottom: 0;
+    width: 100%;
+    
+}
+
+.text-foot {
+    font-family: Anaheim;
+    font-size: 20px;
+}
+
+.contain-contact {
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.contact {
+    
+    /* background-color: #ffc100; */
+    display: flex;
+    align-items: center;
+    gap: 2px; /* ระยะห่างระหว่างไอคอนกับข้อความ */
+    padding: 8px 15px;
+    border: 1px solid black;
+    border-radius: 20px; /* ทำให้ขอบมน */
+    text-decoration: none;
+    color: black;
+}
+.contact:hover {
+    cursor: pointer;
+    transform: scale(1.035);
+}
+
+.contact-img {
+    margin-left: 1px;
+    width: 31px;
+    height: 31px;
+    border-radius: 50%;
+    overflow: visible;
+    margin-right: 10px;
+}
+
+.contact-img img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.contact-text {
+    /* background-color: #4CAF50; */
+    font-size: 20px;
+}
