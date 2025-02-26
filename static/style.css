@@ -25,6 +25,25 @@ button {
     border: none;
     cursor: pointer;
 }
+
+.icon {
+    font-family: Tillana;
+    position: fixed;
+    top: 0;
+    left: 1vw;
+    font-size: 30px;
+    max-height: 80px;
+    color: black;
+    transition: transform 0.3s, cursor 0.3s;    
+    z-index: 1000; 
+}
+
+.icon:hover {
+    cursor: pointer;
+    transform: scale(1.035);
+}
+  
+
 .result {
     margin-top: 20px;
     font-size: 1.5em;
